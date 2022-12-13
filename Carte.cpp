@@ -7,43 +7,48 @@
 Carte::Carte(std::string numeCarte,std::string autor,std::string editura, int numarPagini, int anPublicatie ):  autor(std::move(autor)), editura(std::move(editura)), numeCarte(std::move(numeCarte)), anPublicatie(anPublicatie), numarPagini(numarPagini) {}
 Carte::Carte(): autor("nedefinit"), editura("nedefinit"), numeCarte("nedefinit") ,anPublicatie(0) , numarPagini(0) {}
 
-void Carte::print() const
+[[maybe_unused]] void Carte::print() const
 {
     std::cout << "Numele volumului este: " << numeCarte <<std::endl << "Numele autorului este: "<< autor << std::endl << "Numele editurii este: "<< editura <<std::endl<< "Numarul de pagini este: "<< numarPagini<<std::endl<<"Anul publicatiei este: "<<anPublicatie<<std::endl;
 }
 Carte::Carte(const Carte& rhs)
 {
-    numeCarte = std::move(rhs.numeCarte);
-    autor = std::move(rhs.autor);
-    editura = std::move(rhs.editura);
+    numeCarte = rhs.numeCarte;
+    autor = rhs.autor;
+    editura = rhs.editura;
     numarPagini = rhs.numarPagini;
     anPublicatie = rhs.anPublicatie;
 }
-const std::string Carte::getNumeCarte() const
+std::string Carte::getNumeCarte() const
 {
     return numeCarte;
 }
-const std::string Carte::getAutor() const
+
+[[maybe_unused]] std::string Carte::getAutor() const
 {
     return autor;
 }
-const std::string Carte::getEditura() const
+std::string Carte::getEditura() const
 {
     return editura;
 }
-int Carte::getAnPublicatie() const
+
+[[maybe_unused]] int Carte::getAnPublicatie() const
 {
     return anPublicatie;
 }
-int Carte::getNumarPagini() const
+
+[[maybe_unused]] int Carte::getNumarPagini() const
 {
     return numarPagini;
 }
-void Carte::setNumeCarte(std::string _numeCarte)
+
+[[maybe_unused]] void Carte::setNumeCarte(std::string _numeCarte)
 {
     this->numeCarte = std::move(_numeCarte);
 }
-void Carte::setAutor(std::string _autor)
+
+[[maybe_unused]] void Carte::setAutor(std::string _autor)
 {
     this->autor = std::move(_autor);
 }

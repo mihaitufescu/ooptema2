@@ -17,27 +17,27 @@ public:
 
     Carte(const Carte &rhs);
 
-    void print() const;
+    [[maybe_unused]] void print() const;
 
-    const std::string getNumeCarte() const;
+    [[nodiscard]] std::string getNumeCarte() const;
 
-    const std::string getAutor() const;
+    [[maybe_unused]] [[nodiscard]] std::string getAutor() const;
 
-    const std::string getEditura() const;
+    [[maybe_unused]] [[nodiscard]] std::string getEditura() const;
 
-    int getAnPublicatie() const;
+    [[maybe_unused]] [[nodiscard]] int getAnPublicatie() const;
 
-    int getNumarPagini() const;
+    [[maybe_unused]] [[nodiscard]] int getNumarPagini() const;
 
-    void setNumeCarte(std::string _numeCarte);
+    [[maybe_unused]] void setNumeCarte(std::string _numeCarte);
 
-    void setAutor(std::string _autor);
+    [[maybe_unused]] void setAutor(std::string _autor);
 
-    void setEditura(std::string _editura);
+    [[maybe_unused]] void setEditura(std::string _editura);
 
-    void setAnPublicatie(int _anPublicatie);
+    [[maybe_unused]] void setAnPublicatie(int _anPublicatie);
 
-    void setNumarPagini(int _numarPagini);
+    [[maybe_unused]] void setNumarPagini(int _numarPagini);
 
     friend std::istream &operator>>(std::istream &is, Carte &rhs);
 

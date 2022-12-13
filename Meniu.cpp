@@ -1,8 +1,7 @@
-
 #include "iostream"
 #include "Meniu.h"
 
-Meniu::Meniu(const int _module) :module(_module){}
+Meniu::Meniu(int _module) :module(_module){}
 
 Meniu::Meniu() : module(0) {}
 
@@ -36,11 +35,9 @@ int Meniu::getModule() const {
     return module;
 }
 
-void Meniu::setModule(int module) {
-    Meniu::module = module;
+void Meniu::setModule(int _module) {
+    module = _module;
 }
 
-Meniu::~Meniu() {
-
-}
+Meniu::~Meniu() = default;
 

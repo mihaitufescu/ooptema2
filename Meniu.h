@@ -7,10 +7,10 @@
 class Meniu {
     int module;
 public:
-    Meniu(const int _module);
+    explicit Meniu(int _module);
     Meniu();
-    int getModule() const;
-    void setModule(int module);
+    [[nodiscard]] int getModule() const;
+    void setModule(int _module);
     void afisareComenzi();
     ~Meniu();
 

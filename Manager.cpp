@@ -1,8 +1,10 @@
 
 #include "Manager.h"
+
+#include <utility>
 #include "iostream"
 Manager::Manager(std::string nume, std::string dataAngajare, std::string titluJob, int varsta,int _idManager, int _angajati,
-                 int _comision) : Angajat(nume, dataAngajare,titluJob,varsta,_idManager) {
+                 int _comision) : Angajat(std::move(nume), std::move(dataAngajare),std::move(titluJob),varsta,_idManager) {
     angajatiInSubordine = _angajati;
     comision = _comision;
     idManager=0;

@@ -39,5 +39,5 @@ std::ostream &operator<<(std::ostream &os, const ManagementAngajati &angajati) {
 
 int ManagementAngajati::getNumarAngajati() {
     return numarAngajati;
-};
+}
 
