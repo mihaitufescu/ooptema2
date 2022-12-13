@@ -6,7 +6,7 @@
 #include "cstring"
 
 
-Librarie::Librarie(int newSize) : sizeOfLibrary(newSize) {}
+[[maybe_unused]] Librarie::Librarie(int newSize) : sizeOfLibrary(newSize) {}
 Librarie::Librarie() : sizeOfLibrary(0) {}
 
 [[maybe_unused]] int Librarie:: getSizeOfLibrary() const
@@ -41,7 +41,7 @@ std::string convertToUpperCase (std::string text)
 }
 void Librarie::findBook (std::string textToSearch)
 {
-    std::string tempTextToSearch = convertToUpperCase(textToSearch);
+    std::string tempTextToSearch = convertToUpperCase(std::move(textToSearch));
     bool found = false;
     for (auto i = 0; i< sizeOfLibrary; i++)
     {
@@ -51,7 +51,7 @@ void Librarie::findBook (std::string textToSearch)
         }
 
     }
-    if(found == false)
+    if(!found)
         std::cout<<"Nicio carte cu acest titlu nu a fost gasita!\n";
 }
 Librarie::~Librarie()

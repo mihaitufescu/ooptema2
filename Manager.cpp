@@ -19,19 +19,19 @@ void Manager::printAngajat() const {
         std::cout<<"Numele managerului este "<<nume<<std::endl<<"Data managerului este: "<<dataAngajare<<std::endl<<"Titlul jobului managerului este "<<titluJob<<std::endl<<"Varsta managerului este "<<varsta<<std::endl<<"Numarul de angajati in subordine "<<angajatiInSubordine<<std::endl<<"Comisionul este "<<comision<<"Id manager este "<<idManager<<std::endl;
 }
 
-int Manager::getAngajatiInSubordine() const {
+[[maybe_unused]] int Manager::getAngajatiInSubordine() const {
     return angajatiInSubordine;
 }
 
-int Manager::getComision() const {
+[[maybe_unused]] int Manager::getComision() const {
     return comision;
 }
 
-void Manager::setAngajatiInSubordine(int _angajatiInSubordine) {
+[[maybe_unused]] void Manager::setAngajatiInSubordine(int _angajatiInSubordine) {
     Manager::angajatiInSubordine = _angajatiInSubordine;
 }
 
-void Manager::setComision(int _comision) {
+[[maybe_unused]] void Manager::setComision(int _comision) {
     Manager::comision = _comision;
 }
 

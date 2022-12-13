@@ -13,7 +13,7 @@ public:
     Manager();
     void printAngajat() const override;
 
-    int getAngajatiInSubordine() const;
+    [[maybe_unused]] int getAngajatiInSubordine() const;
     int getComision() const;
     void setAngajatiInSubordine(int _angajatiInSubordine);
     void setComision(int _comision);

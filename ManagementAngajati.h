@@ -15,15 +15,14 @@ class ManagementAngajati {
     int id_locatie;
     std::vector<std::shared_ptr<Angajat>> listAngajati = {};
 public:
-    ManagementAngajati(int _id);
+    explicit ManagementAngajati(int _id);
     ManagementAngajati();
-
-    int getIdLocatie() const;
-    void setIdLocatie(int _id);
+    [[maybe_unused]] [[nodiscard]] int getIdLocatie() const;
+    [[maybe_unused]] void setIdLocatie(int _id);
     bool addAngajat(std::shared_ptr<Angajat> angajat);
     void printListaAngajati() const;
     friend std::ostream &operator<<(std::ostream &os, const ManagementAngajati &angajati);
-    static int getNumarAngajati();
+    [[maybe_unused]] static int getNumarAngajati();
 };
 
 

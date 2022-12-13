@@ -17,7 +17,8 @@ public:
     Angajat(std::string nume, std::string dataAngajare, std::string titluJob ,int varsta, int idManager);
     Angajat();
     Angajat(const Angajat &rhs);
-    std::string getNume() const;
+
+    [[maybe_unused]] std::string getNume() const;
     std::string getDataAngajare() const;
     std::string getTitluJob() const;
     int getVarsta() const;

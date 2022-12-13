@@ -4,21 +4,22 @@
 
 #include "ManagementAngajati.h"
 #include <iostream>
+#include <utility>
 
 int ManagementAngajati::numarAngajati = 0;
 ManagementAngajati::ManagementAngajati(int _id) : id_locatie(_id) {}
 ManagementAngajati::ManagementAngajati() : id_locatie(0) {}
 
-int ManagementAngajati::getIdLocatie() const {
+[[maybe_unused]] int ManagementAngajati::getIdLocatie() const {
     return id_locatie;
 }
 
-void ManagementAngajati::setIdLocatie(int _id) {
+[[maybe_unused]] void ManagementAngajati::setIdLocatie(int _id) {
     id_locatie = _id;
 }
 
 bool ManagementAngajati::addAngajat(std::shared_ptr<Angajat> angajat) {
-    listAngajati.push_back(static_cast<std::shared_ptr<Angajat>>(angajat));
+    listAngajati.push_back(static_cast<std::shared_ptr<Angajat>>(std::move(angajat)));
     numarAngajati++;
     return true;
 }
@@ -37,7 +38,7 @@ std::ostream &operator<<(std::ostream &os, const ManagementAngajati &angajati) {
     return os;
 }
 
-int ManagementAngajati::getNumarAngajati() {
+[[maybe_unused]] int ManagementAngajati::getNumarAngajati() {
     return numarAngajati;
 }
 

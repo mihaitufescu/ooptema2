@@ -16,48 +16,42 @@ Angajat::Angajat(const Angajat &rhs)
     varsta = rhs.varsta;
     idManager = rhs.idManager;
 }
-std::string Angajat::getNume() const
+
+[[maybe_unused]] std::string Angajat::getNume() const
 {
     return nume;
 }
-std::string Angajat::getDataAngajare() const
+[[maybe_unused]] std::string Angajat::getDataAngajare() const
 {
     return dataAngajare;
 }
-std::string Angajat::getTitluJob() const
+[[maybe_unused]] std::string Angajat::getTitluJob() const
 {
     return titluJob;
 }
-int Angajat::getVarsta() const
+[[maybe_unused]] int Angajat::getVarsta() const
 {
     return varsta;
 }
-int Angajat::getIdManager() const
+[[maybe_unused]] int Angajat::getIdManager() const
 {
     return idManager;
 }
-Angajat& Angajat::operator=(const Angajat &rhs){
-    nume = rhs.nume;
-    dataAngajare = rhs.dataAngajare;
-    titluJob = rhs.titluJob;
-    varsta = rhs.varsta;
-    idManager = rhs.idManager;
-    return *this;
+Angajat& Angajat::operator=(const Angajat &rhs)= default;
+
+[[maybe_unused]] void Angajat::setNume(std::string _nume) {
+    nume = std::move(_nume);
 }
 
-void Angajat::setNume(std::string _nume) {
-    nume = _nume;
+[[maybe_unused]] void Angajat::setDataAngajare(std::string _data) {
+    dataAngajare = std::move(_data);
 }
 
-void Angajat::setDataAngajare(std::string _data) {
-    dataAngajare = _data;
+[[maybe_unused]] void Angajat::setTitluJob(std::string _titluJob) {
+    titluJob = std::move(_titluJob);
 }
 
-void Angajat::setTitluJob(std::string _titluJob) {
-    titluJob = _titluJob;
-}
-
-void Angajat::setVarsta(int _varsta) {
+[[maybe_unused]] void Angajat::setVarsta(int _varsta) {
     varsta = _varsta;
 }
 
@@ -68,7 +62,7 @@ void Angajat::setIdManager(int _id) {
 void Angajat::printAngajat() const {
     std::cout<<"Numele angajatului este "<<nume<<std::endl<<"Data angajarii este: "<<dataAngajare<<std::endl<<"Titlul jobului angajatului este "<<titluJob<<std::endl<<"Varsta angajatului este "<<varsta<<std::endl<<"Id-ul managerelui al acestui angajat este "<<idManager<<std::endl;
 }
-Angajat::~Angajat(){}
+Angajat::~Angajat()= default;
 
 std::istream &operator>>(std::istream &is, Angajat &rhs) {
     std::cout<<"Numele angajatului este "<<std::endl;

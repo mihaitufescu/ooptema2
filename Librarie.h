@@ -11,7 +11,7 @@ private:
     int sizeOfLibrary;
     std::vector<std::shared_ptr<Carte>> listaCarti = {};
 public:
-    Librarie(int newSize);
+    [[maybe_unused]] Librarie(int newSize);
     Librarie();
 
     [[maybe_unused]] int getSizeOfLibrary() const;
