@@ -1,7 +1,3 @@
-//
-// Created by Simona on 12/9/2022.
-//
-
 #include "Angajat.h"
 #include "iostream"
 #include <utility>
@@ -21,7 +17,8 @@ Angajat::Angajat(const Angajat &rhs)
 {
     return nume;
 }
-[[maybe_unused]] std::string Angajat::getDataAngajare() const
+
+[[maybe_unused]] [[maybe_unused]] std::string Angajat::getDataAngajare() const
 {
     return dataAngajare;
 }
@@ -44,6 +41,10 @@ Angajat& Angajat::operator=(const Angajat &rhs)= default;
 }
 
 [[maybe_unused]] void Angajat::setDataAngajare(std::string _data) {
+    const char *copie = _data.c_str();
+    if((copie[0]<'0' || copie[0]>'9') || (copie[1]<'0' || copie[1]>'9') || copie[2]!='/' || (copie[3]<'0' || copie[3]>'9') || (copie[4]<'0' || copie[4]>'9') || copie[5]!= '/' || (copie[6]<'0' || copie[6]>'9') || (copie[7]<'0' || copie[7]>'9') || (copie[8]<'0' || copie[8]>'9') || (copie[9]<'0' || copie[9]>'9'))
+        throw ErorareFormatareData();
+
     dataAngajare = std::move(_data);
 }
 

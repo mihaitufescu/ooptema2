@@ -4,7 +4,7 @@
 
 #include <ostream>
 #include "string"
-
+#include "ErorareFormatareData.h"
 
 class Angajat {
 protected:
@@ -19,15 +19,16 @@ public:
     Angajat(const Angajat &rhs);
 
     [[maybe_unused]] std::string getNume() const;
-    std::string getDataAngajare() const;
-    std::string getTitluJob() const;
-    int getVarsta() const;
-    int getIdManager() const;
-    void setNume(std::string _nume);
-    void setDataAngajare(std::string _data);
-    void setTitluJob(std::string _titluJob);
-    void setVarsta(int _varsta);
-    void setIdManager(int _id);
+
+    [[maybe_unused]] std::string getDataAngajare() const;
+    [[maybe_unused]] std::string getTitluJob() const;
+    [[maybe_unused]] int getVarsta() const;
+    [[maybe_unused]] int getIdManager() const;
+    [[maybe_unused]] void setNume(std::string _nume);
+    [[maybe_unused]] void setDataAngajare(std::string _data);
+    [[maybe_unused]] void setTitluJob(std::string _titluJob);
+    [[maybe_unused]] void setVarsta(int _varsta);
+    [[maybe_unused]] void setIdManager(int _id);
     virtual void printAngajat() const;
     Angajat& operator=(const Angajat& rhs);
     friend std::istream &operator>>(std::istream &is, Angajat &rhs);

@@ -1,6 +1,4 @@
-//
-// Created by Simona on 12/12/2022.
-//
+
 
 #ifndef ANGAJAT_CPP_MANAGEMENTANGAJATI_H
 #define ANGAJAT_CPP_MANAGEMENTANGAJATI_H

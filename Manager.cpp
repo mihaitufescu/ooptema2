@@ -16,7 +16,7 @@ Manager::Manager() : Angajat() {
 }
 
 void Manager::printAngajat() const {
-        std::cout<<"Numele managerului este "<<nume<<std::endl<<"Data managerului este: "<<dataAngajare<<std::endl<<"Titlul jobului managerului este "<<titluJob<<std::endl<<"Varsta managerului este "<<varsta<<std::endl<<"Numarul de angajati in subordine "<<angajatiInSubordine<<std::endl<<"Comisionul este "<<comision<<"Id manager este "<<idManager<<std::endl;
+        std::cout<<"Numele managerului este "<<nume<<std::endl<<"Data angajarii managerului este: "<<dataAngajare<<std::endl<<"Titlul jobului managerului este "<<titluJob<<std::endl<<"Varsta managerului este "<<varsta<<std::endl<<"Numarul de angajati in subordine "<<angajatiInSubordine<<std::endl<<"Comisionul este "<<comision<<std::endl<<"Id manager este "<<idManager<<std::endl;
 }
 
 [[maybe_unused]] int Manager::getAngajatiInSubordine() const {

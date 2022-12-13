@@ -41,7 +41,7 @@ endif()
 ###############################################################################
 
 # NOTE: update executable name in .github/workflows/cmake.yml when changing name here
-add_executable(oop main.cpp Carte.cpp Librarie.cpp Angajat.cpp Manager.cpp Manager.h Meniu.cpp Meniu.h ManagementAngajati.cpp ManagementAngajati.h)
+add_executable(oop main.cpp Carte.cpp Librarie.cpp Angajat.cpp Manager.cpp Manager.h Meniu.cpp Meniu.h ManagementAngajati.cpp ManagementAngajati.h ErorareFormatareData.cpp ErorareFormatareData.h)
 
 ###############################################################################
 
